@@ -67,7 +67,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                         }
                     ); 
         
-            let response: Response<SignUpResponse> =  client.sign_up(request).await?; // Make a sign up request. Propagate any errors.
+            let response: Response<SignUpResponse> =  client.sign_up(request).await?; 
         
             println!("{:?}", response.into_inner());
         }
@@ -78,7 +78,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
                         }
                     );  
         
-            let response: Response<SignOutResponse> = client.sign_out(request).await?;// Make a sign out request. Propagate any errors.
+            let response: Response<SignOutResponse> = client.sign_out(request).await?;
         
             println!("{:?}", response.into_inner());
         }
